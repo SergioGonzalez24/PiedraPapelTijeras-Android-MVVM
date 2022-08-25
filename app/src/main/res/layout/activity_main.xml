@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JuegoPpptV">
+    tools:context=".view.JuegoPpptV">
 
     <TextView
         android:id="@+id/textView"
@@ -30,7 +30,7 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="564dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -45,15 +45,98 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jugador"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etPuntosJugador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"/>
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Computadora"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etPuntosComputadora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnPiedra"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="right"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+                android:scaleType="fitCenter"
+                android:tint="#9200FA"
+                app:srcCompat="@drawable/piedra" />
+
+            <ImageButton
+                android:id="@+id/btnPapel"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="left"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:scaleType="fitCenter"
+                android:tint="#9200FA"
+                app:srcCompat="@drawable/papel" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnTijera"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:tint="#9200FA"
+            app:srcCompat="@drawable/tijeras" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
